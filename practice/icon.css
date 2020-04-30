@@ -1,0 +1,29 @@
+body{
+  background-image : url('https://i.imgur.com/HXIjt3K.jpg');
+  margin : 0;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display : block;
+  position : absolute;
+  top : 200px;
+  left : 200px;
+}
+li{
+  float : left;
+}
+li a{
+    display: block;
+    padding: 25px;
+}
+img{
+  cursor : pointer;
+  transform : scale(1,1);
+  transition: transform 0.5s;
+}
+img:hover {
+  overflow : hidden;
+  transform : scale(1.25,1.25);  
+}

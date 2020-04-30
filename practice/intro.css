@@ -1,0 +1,41 @@
+body{
+  margin : 0;
+  background-image : url('https://i.imgur.com/HXIjt3K.jpg');
+}
+#home{
+  position : fixed;
+  height : 75px;
+  left : 0px;
+}
+#intro{
+  position : absolute;
+  top : 75px;
+  width : 100%;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  position : fixed;
+  bottom : 0;
+  right : 50px;
+}
+li{
+  float : left;
+  display: block;
+  padding: 20px; 
+}
+li:last-child{
+  width : 100px;
+
+  position : fixed;
+  left : 25px;
+  padding : 25px;
+}
+.navbar a img{
+  transform : scale(1,1);
+  transition: transform 0.5s;
+ }
+.navbar a img:hover {
+  overflow : hidden;
+  transform : scale(1.25,1.25);  
+}

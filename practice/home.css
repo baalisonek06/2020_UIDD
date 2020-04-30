@@ -1,0 +1,24 @@
+body{
+    background-image : url('https://i.imgur.com/HXIjt3K.jpg');
+    margin : 0;
+}
+.home{
+  position : relative;
+  left : 450px;
+  top : 250px;
+}
+.click{
+  position: absolute;
+  top : 150px;
+  left : 375px;
+}
+.click img{
+  transform : scale(1,1);
+  transition: transform 0.5s;
+}
+.click img:hover {
+  overflow : hidden;
+  transform : scale(1.25,1.25);  
+}
+
+
