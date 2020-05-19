@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <mata charset="UTF-8"></mata>
+    <mata name="viewport" content="width=100%, initial-scale=1.0"></mata>
+    <title>Shopping</title>
+    <link rel="stylesheet" href="new_ShoppingPage.css">
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAmvcTC7Umo9z1PpjZ_S11uwM46qqb8HDg&callback=initMap"></script>
+    <script>
+      var map;
+      function initMap() {
+                map = new google.maps.Map(document.getElementById("container_map"), {
+                            center: {lat: -34.397, lng: 150.644},
+                            zoom: 8
+                          });
+              }
+    </script>
+  </head>
+
+<body>
+    <div id="ShoppingPage">
+        <div class="header">
+            <div class="header_logo">Lazebra</div>
+            <div class="header_input">
+                <form action=" "><input type="text" name="place" placeholder="地址："></form>
+            </div>
+            <div class="header_navbar cursor">
+                <div class="button" id="provide_button">發起代購</div>
+                <img src="../component/img/Shopping/search.svg">
+                <img src="../component/img/Shopping/shoppingcart.svg" id="button_shoppinglist">
+                <div class="header_button"><img src="../component/img/login.svg">
+                    <div id="user_name">User</div>
+                </div>
+            </div>
+            <div id="user_status">
+                <ul>
+                    <li>代購者</li>
+                    <li>買家</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="slider_provide" >
+            <div id="provide_header">
+                <div id="user_name_list">User</div>的代購訂單
+            </div>
+            <div class="slider_close cursor"></div>
+            <div id="provide_title">代購店家</div>
+            <div id="provide_shop">
+                <ul>
+                    <li id="shop_carrefour"></li>
+                    <li id="shop_pxmart"></li>
+                    <li id="shop_watsons"></li>
+                    <li id="shop_watsons"></li>
+                </ul>
+            </div>
+            <div id="provide_container">
+                <form action=" ">
+                <input type="radio" id="button_number">
+                代購人數上限<input type="number" name="provider_number">人<br>
+
+                代購結束時間<br>
+                    日期<input type="date" name="finish_date">
+                    時間<input type="time" name="finish_time" id="time"><br>
+                取貨時間<br>
+                日期<input type="date" name="pickup_date">
+                時間<input type="time" name="pickup_time" id="time"><br>
+                </form>
+            </div>
+            <div class="list_button" id="provider_button">發起代購</div>
+        </div>
+
+        <div class="container" id="container_shopping">
+            <!--google map-->
+            <div id="container_map"></div>
+            <div id="container_info">
+                <div id="info_title">目前沒有開放的代購...
+                    <div class="button" id="info_button">排序</div>
+                </div>
+                <div id="info_filter">
+                    <ul  class="cursor">
+                        <li>代購評價 高到低</li>
+                        <li>代購費 低到高</li>
+                        <li>取貨時間 快到慢</li>
+                    </ul>
+                </div>
+                <div id="info_list">
+                    <img src="../component/img/landmark.svg">XXX正在前往OOO
+                    <p>X分鐘後收單</p>
+                </div>
+            </div>
+        </div> 
+        <div class="content">
+            <div class="content_sub" id="content_shop">
+                <div class="content_title">線上購物商店</div>
+                <div class="content_list cursor" id="shop_list" >
+                    <ul>
+                        <li id="shop_carrefour"></li>
+                        <li id="shop_pxmart"></li>
+                        <li id="shop_watsons"></li>
+                        <li id="shop_watsons"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content_sub" id="content_item">
+                <div class="content_title">品項分類</div>
+                <div class="content_list cursor" id="item_list">
+                    <ul>
+                        <li id="item_snack">零食</li>
+                        <li id="item_drink">飲料</li>
+                        <li id="item_vegetable">蔬菜</li>
+                        <li id="item_fruit">水果</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </div>
+</script>
+</body>
+</html>
