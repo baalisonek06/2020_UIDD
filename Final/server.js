@@ -10,6 +10,10 @@ app.get('/map',(req,res)=>{
   res.sendFile(__dirname+"/map.html")
 })
 
+app.get('/example',(req,res)=>{
+  res.sendFile(__dirname+"/map_example.html")
+})
+
 
 app.listen(port, ()=>{
   console.log(`listening on port: ${port}`)
