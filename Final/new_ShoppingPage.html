@@ -6,10 +6,10 @@
     <mata name="viewport" content="width=100%, initial-scale=1.0"></mata>
     <title>Shopping</title>
     <link rel="stylesheet" href="new_ShoppingPage.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!--map api-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmvcTC7Umo9z1PpjZ_S11uwM46qqb8HDg&callback=initMap&libraries=&v=weekly" defer></script>
     <script>
-      (function(exports) {
+      /*(function(exports) {
         "use strict";
         function initMap() {
         exports.map = new google.maps.Map(document.getElementById("map"), {
@@ -21,7 +21,14 @@
             });
         }
         exports.initMap = initMap;
-     })((this.window = this.window || {}));
+     })((this.window = this.window || {}));*/
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('container_map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
     </script>
   </head>
 
