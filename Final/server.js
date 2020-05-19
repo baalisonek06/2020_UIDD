@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 9800
+const port = 1477
 
 app.get('/page',(req,res)=>{
   res.sendFile(__dirname+"/new_ShoppingPage.html")
